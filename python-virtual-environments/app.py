@@ -16,3 +16,8 @@ def results_page():
             return render_template("error.html")
     else:
             return render_template("error.html")
+
+@app.errorhandler(404)
+def page_not_found(error):
+    print("ERORR-404",error)
+    return render_template("error.html")
