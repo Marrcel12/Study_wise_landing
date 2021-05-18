@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import json
-SERVICE_ACCOUNT_FILE = 'key.json'
+SERVICE_ACCOUNT_FILE = 'google-credentials.json'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 def get_data():
     creds = service_account.Credentials.from_service_account_file(
