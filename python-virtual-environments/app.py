@@ -1,10 +1,18 @@
-from flask import Flask, render_template
+from process import get_search_tags,get_data,prepere_data,get_data_query
+from flask import Flask, render_template,request
 app = Flask(__name__)
-
+data=get_data()
 @app.route('/')
 def main_page():
-    return render_template("index.html")
+    return render_template("index.html",context=get_search_tags(data))
 
-@app.route('/results',methods=['POST'])
+@app.route('/results',methods=['POST','GET'])
 def results_page():
-    return render_template("index.html")
+    if request.method=='POST':
+        tags=request.form.getlist("tags[]")
+        if tags!=[]:
+            return render_template("results.html",context=get_data_query(prepere_data(data),tags))
+        else:
+            return render_template("error.html")
+    else:
+            return render_template("error.html")
