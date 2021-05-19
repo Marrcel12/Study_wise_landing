@@ -1,1 +1,1 @@
-web: gunicorn python-virtual-environments.wsgi
+web: gunicorn app.wsgi
