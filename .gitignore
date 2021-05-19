@@ -1,2 +1,3 @@
-python-virtual-environments/env
-python-virtual-environments/__pycache__
+app/env
+app/__pycache__
+app/google-crededentials.json
