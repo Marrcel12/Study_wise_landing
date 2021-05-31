@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>studyGram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/defineFonts.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
    <!-- vendors -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
@@ -11,17 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body >
+    <div id="bg" style="background-image: url({{ url_for('static', filename='img/headerImg.png') }});"></div>
     <nav>
-        <div class="empty"></div>
-        <div class="pages">
-            <img src="{% static 'img\svg\Icon material-people.svg' %}" alt="">
-            <img src="{% static 'img\svg\icons8-search-50.svg' %}" alt="">
-            <img src="{% static 'img\svg\Icon awesome-shopping-bag.svg' %}" alt="">
-        </div>
-        <div class="login">
-            <button>Zaloguj się</button>
-            <button>Zarejestruj się</button>
-        </div>
+        <div class="logo">STUDYWISE</div>
+        
     </nav>
     <header>
         <div class="headerText">
@@ -30,20 +24,29 @@
         </div>
         <div class="searchField">
             <form autocomplete="off" action="/results" method="POST">
+                <img src="{{ url_for('static', filename='img/svg/icons8-search-50.svg') }}" onclick="submitForm()">
                 <select class="js-example-basic-multiple" name="tags[]" multiple="multiple"required>
                     {% for tag in context %}
                     <option value="{{tag}}">{{ tag }}</option>
                         {% endfor %}
                   </select>
-                <input type="submit">
             </form>
         </div>
         <div class="scrollDown">
-            <!-- <img src="{% static 'img\svg\Icon ionic-ios-arrow-down.svg' %}" alt="" onclick="scrollDown()"> -->
+                        <img src="{{ url_for('static', filename='img/svg/Icon ionic-ios-arrow-down.svg') }}" alt="" onclick="scrollDown()">
+
         </div>
     </header>
     
 <script type="text/javascript"  src="{{ url_for('static', filename='search_bar.js') }}"></script>
-
+<footer>
+    <div>
+        <p>O nas</p>
+        <p>Regulamin</p>
+        <p>Polityka prywatności</p>
+        <p>Kontakt</p>
+        <p>Oferty</p>
+    </div>
+</footer>
 </body>
 </html>
