@@ -1,3 +1,4 @@
 app/env
 app/__pycache__
 app/google-crededentials.json
+app/google-credentials.json
