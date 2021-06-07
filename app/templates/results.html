@@ -4,15 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/defineFonts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
 </head>
 <body>
     {% for dict_item in context %}
-   {% for key, value in dict_item.items() %}
-      <h1>Key: {{key}}</h1>
-      <h2>Value: {{value}}</h2>
-   {% endfor %}
-   <hr>
+    <div id="profile_card">
+        <div class="profileMain">
+            <div class="imgContainer">
+                <!-- <img src="{{dict_item.ig_photo}}" alt="{{dict_item.login}}"> -->
+                <img src="https://i.ytimg.com/vi/im2E87V_8G8/maxresdefault.jpg" alt="{{dict_item.login}}">
+
+            </div>
+            <div class="uName">@{{dict_item.login}}</div>
+        </div>
+        <div class="schools">
+            <div class="schoolsContent">
+                {% for school in dict_item.school_levels %}
+            <p class="schoolLevel">
+                {{school}}
+            </p>
+            {% endfor %}
+            </div>
+        </div>
+        <div class="topics">
+            <div class="topicsContent">
+                {% for topic in dict_item.topics %}
+            <p class="topic">
+                {{topic}}
+            </p>
+            {% endfor %}
+            </div>
+        </div>
+        <div class="openProfile">
+            <a href="{{dict_item.ig_profile}}" target="_blank">Otwórz profil</a>
+        </div>
+    </div>
 {% endfor %}
 </body>
 </html>

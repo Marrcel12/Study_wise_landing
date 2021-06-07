@@ -1,0 +1,104 @@
+body{
+    font-family: 'Lato';
+}
+#profile_card{
+    width: 95vw;
+    max-width: 1100px;
+    margin: 40px auto;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 30% 20% 20% 30%;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.35);
+    border-radius: 15px;
+    position: relative;
+}
+#profile_card>div{
+    text-align: center;
+}
+
+.imgContainer {
+    display: flex;
+    /* establish flex container */
+    flex-direction: column;
+    justify-content: center;
+    /* center items vertically, in this case */
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid #E69D90;
+    position: relative;
+    top: 25px;
+    left: 20px;
+}
+.uName{
+    font-size: 20px;
+    position: absolute;
+    top: 60px;
+    left: 140px;
+}
+
+.imgContainer > img {
+    max-height: 100px;
+    /* to fix in future */
+}
+
+.openProfile a{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+
+        text-decoration: none;
+        color: #767471;
+        border-color: #767471;
+        border: 2px solid;
+        width: 120px;
+        padding: 7px;
+        border-radius: 5px;
+        position: relative;
+        top: 52px;
+}
+
+.schools{
+    position: relative;
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.schools::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+  }
+
+.schoolsContent{
+    width: 100%;
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topics{
+    position: relative;
+    height: 120px;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 15px 0;
+}
+
+.topics::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+  }
+
+.topicsContent{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
