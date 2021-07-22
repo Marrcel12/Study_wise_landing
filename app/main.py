@@ -1,5 +1,5 @@
-from app.process import get_search_tags,get_data,prepere_data,get_data_query
-# from process import get_search_tags,get_data,prepere_data,get_data_query
+# from app.process import get_search_tags,get_data,prepere_data,get_data_query
+from process import get_search_tags,get_data,prepere_data,get_data_query
 from flask import Flask, render_template,request
 app = Flask(__name__)
 data=get_data()
@@ -12,7 +12,7 @@ def results_page():
     if request.method=='POST':
         tags=request.form.getlist("tags[]")
         if tags!=[]:
-            return render_template("results.html",context=get_data_query(prepere_data(data),tags))
+            return render_template("results.html",context=get_data_query(prepere_data(data),tags), selectOptions = get_search_tags(data))
         else:
             return render_template("error.html")
     else:

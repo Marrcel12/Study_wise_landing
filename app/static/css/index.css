@@ -11,10 +11,6 @@ body > *:not(header, nav, #divider, footer) {
   background-color: white;
 }
 
-body {
-  /* overflow-x: hidden; */
-}
-
 h2 {
   font-family: "Lato Light";
   /* Nunito */
@@ -103,12 +99,18 @@ header {
   border: 2px solid black;
 }
 
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display, section p, section button, footer div p{
+  font-family: "Milliard Light";
+}
+
 .select2-container--default .select2-selection--multiple{
   height: 48px !important;
   border-radius: 24px !important;
   padding-left: 75px !important;
   overflow-y:scroll;
+  font-family: "Milliard Light";
 }
+
 .select2-container--default .select2-selection--multiple::-webkit-scrollbar{
   width: 0;
   background: transparent;
