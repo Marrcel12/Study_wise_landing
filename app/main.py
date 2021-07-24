@@ -1,5 +1,5 @@
-# from app.process import get_search_tags,get_data,prepere_data,get_data_query
-from process import get_search_tags,get_data,prepere_data,get_data_query
+from app.process import get_search_tags,get_data,prepere_data,get_data_query
+# from process import get_search_tags,get_data,prepere_data,get_data_query
 from flask import Flask, render_template,request
 app = Flask(__name__)
 data=get_data()
