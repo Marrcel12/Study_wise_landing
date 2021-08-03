@@ -10,3 +10,11 @@ function submitForm(){
         $('#searchForm').submit();
     }
 }
+
+window.addEventListener("keyup", detectButton);
+
+function detectButton(e){
+    if(e.code == "Enter"){
+        submitForm()
+    }
+}

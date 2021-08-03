@@ -188,3 +188,14 @@ footer p:hover {
   color: white;
 }
 
+.select2-selection{
+  text-align: center;
+}
+
+.select2-selection__rendered, .select2-selection__choice__remove> span{
+  color: #FF7992
+}
+.select2-selection__choice{
+  background-color: white !important;
+  border-color: #FF7992 !important;
+}

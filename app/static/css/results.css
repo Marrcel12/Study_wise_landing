@@ -10,7 +10,7 @@ body{
     height: 150px;
     display: grid;
     grid-template-columns: 30% 20% 20% 30%;
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.35);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.35);
     border-radius: 15px;
     position: relative;
     font-size: 13px;
@@ -121,6 +121,7 @@ nav {
   }
   nav .logo{
       margin: 0 auto;
+      cursor: pointer;
   }
 
   footer {
@@ -128,6 +129,7 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #FAFAFA;
   }
   
   footer > div {
@@ -210,4 +212,16 @@ nav {
   .select2-container--default .select2-selection--multiple::-webkit-scrollbar{
     width: 0;
     background: transparent;
+  }
+
+  .select2-selection{
+    text-align: center;
+  }
+  
+  .select2-selection__rendered, .select2-selection__choice__remove> span{
+    color: #EA6E85
+  }
+  .select2-selection__choice{
+    background-color: white !important;
+    border-color: #EA6E85 !important;
   }
