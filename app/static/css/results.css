@@ -2,6 +2,8 @@ body{
     font-family: 'Milliard Book';
     margin: 0;
     background-color: #FAFAFA;
+    padding-bottom: 70px;
+
 }
 #profile_card{
     width: 95%;
