@@ -44,7 +44,7 @@ header {
 
 .headerText {
   text-transform: uppercase;
-  font-size: 5vh;
+  font-size: 3.5vh;
   color: white;
   text-align: right;
 }
@@ -66,7 +66,7 @@ header {
 .headerText > p:last-of-type {
   background-color: rgba(213, 125, 116, 0.46);
   width: fit-content;
-  top: calc(31vh + 10px);
+  top: calc(30vh + 10px);
   font-family: "Milliard Book";
 }
 
@@ -175,7 +175,8 @@ footer > div {
   display: grid;
   margin: 0 auto;
   max-width: 1000px;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 100%;
+  margin-bottom: 20px;
 }
 
 footer p {
@@ -198,4 +199,24 @@ footer p:hover {
 .select2-selection__choice{
   background-color: white !important;
   border-color: #FF7992 !important;
+}
+
+#searchForm > span{
+  max-width: 950px !important;
+  width: 90vw !important;
+}
+
+@media (min-width: 922px) {
+  footer > div {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-bottom: 0;
+  }
+
+  .headerText{
+    font-size: 5vh;
+  }
+
+  .headerText > p:last-of-type {
+    top: calc(31vh + 10px);
+  }
 }
