@@ -5,7 +5,20 @@
         }
     }
 
+
+    function checkIfFooterFixed(){
+        footerBottom = document.getElementsByTagName('footer')[0].getBoundingClientRect().bottom;
+        if(footerBottom<window.innerHeight){
+            document.getElementsByTagName('footer')[0].style.position = 'fixed';
+            document.getElementsByTagName('footer')[0].style.bottom = '0';
+        }else{
+            document.getElementsByTagName('footer')[0].style.position = 'relative';
+        }
+    }
+
     function returnToIndex(){
         window.location.href = "/";
 
     }
+
+    checkIfFooterFixed();
