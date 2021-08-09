@@ -1,26 +1,29 @@
-body{
+body {
     font-family: 'Milliard Book';
     margin: 0;
     background-color: #FAFAFA;
 }
-#profile_card{
+
+#profile_card {
     width: 90%;
     max-width: 1100px;
     margin: 40px auto;
-    height: 150px;
     display: grid;
-    grid-template-columns: 30% 20% 20% 30%;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.35);
+    grid-template-columns: 100%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
     border-radius: 15px;
     position: relative;
     font-size: 13px;
 }
-#profile_card>div{
+
+#profile_card > div {
     text-align: center;
 }
-    .profileMain{
-        position: relative;
-    }
+
+.profileMain {
+    position: relative;
+    margin-bottom: 60px;
+}
 
 .imgContainer {
     display: flex;
@@ -38,10 +41,11 @@ body{
     top: 10px;
     margin: 0 auto;
 }
-.uName{
+
+.uName {
     font-size: 16px;
     position: absolute;
-    bottom: 10px;
+    bottom: -40px;
     width: 100%;
 }
 
@@ -50,57 +54,57 @@ body{
     /* to fix in future */
 }
 
-.openProfile a{
-        -webkit-appearance: button;
-        -moz-appearance: button;
-        appearance: button;
-
-        text-decoration: none;
-        color: #767471;
-        border-color: #767471;
-        border: 2px solid;
-        width: 120px;
-        padding: 7px;
-        border-radius: 5px;
-        position: relative;
-        top: 52px;
+.openProfile {
+    margin-bottom: 20px;
 }
 
-.schools{
+.openProfile a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #767471;
+    border-color: #767471;
+    border: 2px solid;
+    width: 120px;
+    padding: 7px;
+    border-radius: 5px;
     position: relative;
-    height: 150px;
+}
+
+.schools {
+    position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.schools::-webkit-scrollbar{
+.schools::-webkit-scrollbar {
     width: 0;
     background: transparent;
-  }
-
-.schoolsContent{
-    width: 100%;
-    margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
-.topics{
+.schoolsContent {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.topics {
     position: relative;
-    height: 120px;
     width: 100%;
     overflow-y: scroll;
     margin: 15px 0;
 }
 
-.topics::-webkit-scrollbar{
+.topics::-webkit-scrollbar {
     width: 0;
     background: transparent;
-  }
+}
 
-.topicsContent{
+.topicsContent {
     width: 100%;
     margin: 0;
     position: absolute;
@@ -118,72 +122,77 @@ nav {
     background-color: #EA6E85;
     color: white;
     font-size: 26px;
-  }
-  nav .logo{
-      margin: 0 auto;
-      cursor: pointer;
-  }
+}
 
-  footer {
+nav .logo {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+footer {
     position: relative;
     width: 100%;
     background-color: #FAFAFA;
-  }
-  
-  footer > div {
+}
+
+footer > div {
     position: relative;
     display: grid;
     margin: 0 auto;
     max-width: 1000px;
     grid-template-columns: 100%;
-  }
-  
-  footer p {
+}
+
+footer p {
     text-align: center;
     cursor: pointer;
     transition: .3s linear;
-  }
-  
-  footer p:hover {
-    color: #EA6E85;
-  }
-  section#mainContainer{
-      display: grid;
-      grid-template-columns: 100%;
-      margin-bottom: 15px;
-  }
-  .exampleAside{
-      position: relative;
-      margin: 0 auto;
-      width: 90%;
-      background-size: cover;
-      margin-top: 4vh;
-      border-radius: 20px;
-  }
-  aside:first-of-type .exampleAside{
-    height: 100px;
-  }
-  aside:last-of-type .exampleAside{
-    height: 150px;
-  }
+}
 
-  .searchField {
+footer p:hover {
+    color: #EA6E85;
+}
+
+section#mainContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-bottom: 15px;
+}
+
+.exampleAside {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    background-size: cover;
+    margin-top: 4vh;
+    border-radius: 20px;
+}
+
+aside:first-of-type .exampleAside {
+    height: 100px;
+}
+
+aside:last-of-type .exampleAside {
+    height: 150px;
+}
+
+.searchField {
     position: relative;
     top: 20px;
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-  }
-  
-  .searchField img {
+}
+
+.searchField img {
     position: absolute;
     top: 5px;
     left: 25px;
     cursor: pointer;
     z-index: 11;
-  }
-  
-  .searchField select {
+}
+
+.searchField select {
     font-family: "Milliard Light";
     width: 100%;
     font-size: 23px;
@@ -193,66 +202,114 @@ nav {
     padding-left: 90px;
     box-sizing: border-box;
     border: 2px solid black;
-  }
-  
-  .select2-container--default .select2-selection--multiple .select2-selection__choice__display, section p, section button, footer div p{
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display,
+section p,
+section button,
+footer div p {
     font-family: "Milliard Light";
-  }
-  
-  .select2-container--default .select2-selection--multiple{
+}
+
+.select2-container--default .select2-selection--multiple {
     height: 48px !important;
     border-radius: 24px !important;
     padding-left: 75px !important;
-    overflow-y:scroll;
+    overflow-y: scroll;
     font-family: "Milliard Light";
-  }
-  
-  .select2-container--default .select2-selection--multiple::-webkit-scrollbar{
+}
+
+.select2-container--default .select2-selection--multiple::-webkit-scrollbar {
     width: 0;
     background: transparent;
-  }
+}
 
-  .select2-selection{
+.select2-selection {
     text-align: center;
-  }
-  
-  .select2-selection__rendered, .select2-selection__choice__remove> span{
+}
+
+.select2-selection__rendered,
+.select2-selection__choice__remove > span {
     color: #EA6E85
-  }
-  .select2-selection__choice{
+}
+
+.select2-selection__choice {
     background-color: white !important;
     border-color: #EA6E85 !important;
-  }
-  #searchForm > span{
-    width: 100%!important;
-  }
+}
 
-  @media (min-width: 922px) {
-    footer{
-      height: 60px;
+#searchForm > span {
+    width: 100% !important;
+}
+
+.schools {
+    height: 100px;
+}
+
+.topics {
+    height: 80px;
+}
+
+@media (min-width: 922px) {
+    footer {
+        height: 60px;
     }
+
     footer > div {
-      grid-template-columns: 20% 20% 20% 20% 20%;
-    }
-    section#mainContainer{
-      grid-template-columns: 15% 70% 15%;
-      margin-bottom: 0;
-    }
-    .searchField {
-      width: 95%;
-    }
-   #profile_card {
-     width: 95%;
-    }
-    aside:first-of-type .exampleAside{
-      height: 500px;
-    }
-    aside:last-of-type .exampleAside{
-      height: 350px;
+        grid-template-columns: 20% 20% 20% 20% 20%;
     }
 
-    .exampleAside{
-      margin-top: 10vh;
-  }
-   
-  }
+    section#mainContainer {
+        grid-template-columns: 15% 70% 15%;
+        margin-bottom: 0;
+    }
+
+    .searchField {
+        width: 95%;
+    }
+
+    #profile_card {
+        width: 95%;
+    }
+
+    aside:first-of-type .exampleAside {
+        height: 500px;
+    }
+
+    aside:last-of-type .exampleAside {
+        height: 350px;
+    }
+
+    .exampleAside {
+        margin-top: 10vh;
+    }
+
+    #profile_card {
+        height: 150px;
+        grid-template-columns: 30% 20% 20% 30%;
+    }
+
+    .schools {
+        height: 150px;
+    }
+
+    .topics {
+        height: 120px;
+    }
+
+    .profileMain {
+        margin-bottom: 0;
+    }
+
+    .uName {
+        bottom: 10px;
+    }
+
+    .openProfile {
+        margin-bottom: 0;
+    }
+
+    .openProfile a {
+        top: 52px;
+    }
+}

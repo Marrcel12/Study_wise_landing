@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/defineFonts.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
 </head>
+
 <body>
     <nav>
         <div class="logo" onclick="returnToIndex()">STUDYWISE</div>
-        
     </nav>
     <section id="mainContainer">
         <aside>
@@ -26,10 +26,10 @@
                 <form autocomplete="off" action="/results" method="POST" id="searchForm">
                     <img src="{{ url_for('static', filename='img/svg/icons8-search-50.svg') }}" onclick="submitForm()">
                     <select class="js-example-basic-multiple" name="tags[]" multiple="multiple" required>
-                            {% for tag in selectOptions %}
+                        {% for tag in selectOptions %}
                         <option value="{{tag}}">{{ tag }}</option>
-                            {% endfor %}
-                      </select>
+                        {% endfor %}
+                    </select>
                 </form>
             </div>
             {% for dict_item in context %}
@@ -38,33 +38,32 @@
                     <div class="imgContainer">
                         <!-- <img src="{{dict_item.ig_photo}}" alt="{{dict_item.login}}"> -->
                         <img src="{{dict_item.ig_photo}}" alt="{{dict_item.login}}">
-        
                     </div>
                     <div class="uName">@{{dict_item.login}}</div>
                 </div>
                 <div class="schools">
                     <div class="schoolsContent">
                         {% for school in dict_item.school_levels %}
-                    <p class="schoolLevel">
-                        {{school}}
-                    </p>
-                    {% endfor %}
+                        <p class="schoolLevel">
+                            {{school}}
+                        </p>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="topics">
                     <div class="topicsContent">
                         {% for topic in dict_item.topics %}
-                    <p class="topic">
-                        {{topic}}
-                    </p>
-                    {% endfor %}
+                        <p class="topic">
+                            {{topic}}
+                        </p>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="openProfile">
                     <a href="{{dict_item.ig_profile}}" target="_blank">Otwórz profil</a>
                 </div>
             </div>
-        {% endfor %}
+            {% endfor %}
         </section>
         <aside>
             <div class="exampleAside" style="background-image: url({{ url_for('static', filename='img/pattern2.png') }});"></div>
@@ -79,10 +78,8 @@
             <p>Oferty</p>
         </div>
     </footer>
-<script type="text/javascript"  src="{{ url_for('static', filename='js/main.js') }}"></script>
-<script type="text/javascript"  src="{{ url_for('static', filename='js/results.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/results.js') }}"></script>
 </body>
+
 </html>
-
-
-

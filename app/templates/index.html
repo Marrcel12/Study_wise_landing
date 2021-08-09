@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>studyGram</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/defineFonts.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-   <!-- vendors -->
+    <!-- vendors -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
-<body >
+
+<body>
     <div id="bg" style="background-image: url({{ url_for('static', filename='img/headerImg.png') }});"></div>
     <nav>
         <div class="logo">STUDYWISE</div>
-        
     </nav>
     <header>
         <div class="headerText">
@@ -26,34 +27,34 @@
             <form autocomplete="off" action="/results" method="POST" id="searchForm">
                 <img src="{{ url_for('static', filename='img/svg/icons8-search-50.svg') }}" onclick="submitForm()">
                 <select class="js-example-basic-multiple" name="tags[]" multiple="multiple" required>
-                        {% for tag in context %}
+                    {% for tag in context %}
                     <option value="{{tag}}">{{ tag }}</option>
-                        {% endfor %}
-                  </select>
+                    {% endfor %}
+                </select>
             </form>
         </div>
         <div class="scrollDown" onclick="scrollDown()">
-                        <img src="{{ url_for('static', filename='img/svg/Icon ionic-ios-arrow-down.svg') }}" alt="" onclick="scrollDown()">
-
+            <img src="{{ url_for('static', filename='img/svg/Icon ionic-ios-arrow-down.svg') }}" alt="" onclick="scrollDown()">
         </div>
     </header>
-<section>
-    <p>Chcesz zostać częścią naszej społeczności?</p>
-    <p>Chcesz pomóc tworzyć tą stronę tak aby spełniała Twoje oczekiwania?</p>
-    <p>Zgłoś się do nas tym przyciskiem</p>
-    <button>Dołącz do nas</button>
-    <p>Jeśli masz pytania, albo po prostu chciałbyś z nami porozmawiać -</p>
-    <p>napisz do nas: studywise.info@gmail.com</p>
-</section>
-<footer>
-    <div>
-        <p>O nas</p>
-        <p>Regulamin</p>
-        <p>Polityka prywatności</p>
-        <p>Kontakt</p>
-        <p>Oferty</p>
-    </div>
-</footer>
-<script type="text/javascript"  src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <section>
+        <p>Chcesz zostać częścią naszej społeczności?</p>
+        <p>Chcesz pomóc tworzyć tą stronę tak aby spełniała Twoje oczekiwania?</p>
+        <p>Zgłoś się do nas tym przyciskiem</p>
+        <button>Dołącz do nas</button>
+        <p>Jeśli masz pytania, albo po prostu chciałbyś z nami porozmawiać -</p>
+        <p>napisz do nas: studywise.info@gmail.com</p>
+    </section>
+    <footer>
+        <div>
+            <p>O nas</p>
+            <p>Regulamin</p>
+            <p>Polityka prywatności</p>
+            <p>Kontakt</p>
+            <p>Oferty</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>
