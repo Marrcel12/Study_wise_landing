@@ -18,3 +18,13 @@ function detectButton(e) {
         submitForm()
     }
 }
+
+function openIg(){
+    window.open('https://www.instagram.com/studywise.pl/', '_blank').focus();
+}
+
+var tempHref = document.location.href;
+tempHref = tempHref.replace('127.0.0.1:5000', 'studywise.pl')
+console.log(tempHref)
+window.history.pushState("/test", "", '');
+//document.location.href = tempHref;
