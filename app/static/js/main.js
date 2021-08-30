@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    $('.js-example-basic-multiple').select2();
+    $('.js-example-basic-multiple').select2({
+        placeholder: "Czego chciałbyś się dziś nauczyć"
+    });
 });
 
 function scrollDown() {

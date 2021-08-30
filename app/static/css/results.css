@@ -250,6 +250,19 @@ footer div p {
     height: 80px;
 }
 
+.select2-selection.select2-selection--multiple{
+    display: flex !important;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+.select2-search__field{
+    text-align: center;
+}
+.logo>img{
+    height:40px;
+}
+
 @media (min-width: 922px) {
     footer {
         height: 60px;
